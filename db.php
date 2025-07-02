@@ -1,7 +1,7 @@
 <?php
 $servername = "eventmysql123.mysql.database.azure.com";
 $username = "mysqladmin@eventmysql123";  // Your full user name
-$password = "MyEventDB123!";     // Your actual password
+$password = "Admin123!";     // Your actual password
 $dbname = "event_db";
 
 $conn = mysqli_init();
