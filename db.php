@@ -1,8 +1,8 @@
 <?php
-$servername = "tcp:yourservername.database.windows.net,1433";  // Azure SQL server
-$username = "sqladmin";        // Your admin username
-$password = "YourStrongPassword!";  // The password you set in Azure
-$dbname = "event_db";          // Your database name in Azure
+$servername = "tcp:<your-server-name>.database.windows.net,1433";
+$username = "sqladmin";
+$password = "YourStrongPassword!";
+$dbname = "event_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
