@@ -1,12 +1,14 @@
 <?php
-$servername = "eventserver123.database.windows.net";
-$username = "sqladmin"; // your admin username
-$password = "YourStrongPassword!"; // your actual Azure SQL password
-$dbname = "event_db"; // your database name
+$servername = "eventmysql123.mysql.database.azure.com";
+$username = "sqladmin@eventmysql123";  // Your full user name
+$password = "YourStrongPassword!";     // Your actual password
+$dbname = "event_db";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// ✅ Enable SSL
+$conn = mysqli_init();
+mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$conn->real_connect($servername, $username, $password, $dbname, 3306, NULL, MYSQLI_CLIENT_SSL)) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>
