@@ -1,5 +1,5 @@
 <?php
-$servername = "tcp:eventserver123.database.windows.net,1433";
+$servername = "eventserver123.database.windows.net";
 $username = "sqladmin"; // your admin username
 $password = "YourStrongPassword!"; // your actual Azure SQL password
 $dbname = "event_db"; // your database name
